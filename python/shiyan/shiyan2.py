@@ -3,7 +3,6 @@ from threading import Thread
 
 
 def main():
-
     class ClientHandler(Thread):
 
         def __init__(self, client):
@@ -30,7 +29,7 @@ def main():
                 print(e)
 
     server = socket()
-    server.bind(('192.168.88.131',3000))
+    server.bind(('192.168.88.131', 3000))
     server.listen(512)
     clients = []
     while True:
