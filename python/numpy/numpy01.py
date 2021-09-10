@@ -1,6 +1,7 @@
 # encoding=utf-8
 import numpy
 from scipy import stats
+import matplotlib.pyplot
 
 s = [20, 25, 30, 35, 35]
 
@@ -17,6 +18,9 @@ print(z)
 print(c)
 print(v)
 print(b)
+
+matplotlib.pyplot.hist(b, 5)
+matplotlib.pyplot.show()
 
 print(type(v))
 print(type(1))
