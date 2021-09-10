@@ -6,7 +6,7 @@ import codecs
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
 wb = Workbook()
-dest_filename = '电影.xlsx'
+dest_filename = '爬虫文件/电影.xlsx'
 ws1 = wb.active
 ws1.title = "电影top250"
 
