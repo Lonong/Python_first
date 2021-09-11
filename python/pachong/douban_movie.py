@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # encoding=utf-8
-import requests
 import re
-import codecs
+
+import requests
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
+
 wb = Workbook()
 dest_filename = '爬虫文件/电影.xlsx'
 ws1 = wb.active
