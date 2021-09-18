@@ -1,38 +1,27 @@
-#
-#
-# def main():
-#     number = int(input('请输入学生人数: '))
-#     names = [None] * number
-#     scores = [None] * number
-#     for index in range(len(names)):
-#         names[index] = input('请输入第%d个学生的名字: ' % (index + 1))
-#         scores[index] = float(input('请输入第%d个学生的成绩: ' % (index + 1)))
-#     total = 0
-#     for index in range(len(names)):
-#         print('%s: %.1f分' % (names[index], scores[index]))
-#         total += scores[index]
-#     print('平均成绩是: %.1f分' % (total / number))
-#
-#
-# if __name__ == '__main__':
-#     main()
+#encoding=utf8
 
 
-name = []
-sorce = []
-a = 0
-need = 'y'
-while need == 'y':
-    a += 1
-    # nam = input('请输入第%d个学生姓名' % (a))
-    # name.append(nam)
-    sorc = input('请输入第%d个学生成绩' % (a))
-    sorce.append(sorc)
-    # print(sorce)
+def main():
+    scores = {'骆昊': 95, '白元芳': 78, '狄仁杰': 82}
+    # print(scores['骆昊'])
+    # print(scores['狄仁杰'])
+    # for elem in scores:
+    #     print(elem)
+    #     print('%s\t--->\t%d' % (elem, scores[elem]))
+    # scores['白元芳'] = 65
+    # scores['诸葛王朗'] = 71
+    scores.update(冷面=67, 方启鹤=85)
+    print(scores)
+    if '武则天' in scores:
+        print(scores['武则天'])
+    print(scores.get('武则天'))
+    print(scores.get('武则天', 60))
+    print(scores.popitem())
+    print(scores.popitem())
+    print(scores.pop('骆昊', 100))
+    scores.clear()
+    print(scores)
 
-    need = input('是否继续添加？')
 
-total = 0
-for i in range(0, len(sorce)):
-    total += int(sorce[i])
-print("平均成绩为: ", total//len(sorce))
+if __name__ == '__main__':
+    main()
